@@ -6,6 +6,7 @@ const showAllBtn = document.querySelector(".show-all-btn");
 const showActiveBtn = document.querySelector(".show-active-btn");
 const showCompletedBtn = document.querySelector(".show-completed-btn");
 const clearCompletedBtn = document.querySelector(".clear-completed-btn");
+const completeAllBtn = document.querySelector(".complete-all-btn");
 
 let todos = [];
 
@@ -128,6 +129,18 @@ function filterTodos(type) {
   });
 }
 
+function toggleAll() {
+  const areAllCompleted = todos.every((todo) => todo.completed);
+
+  todos.forEach((todo) => {
+    todo.completed = !areAllCompleted;
+  });
+
+  saveToStorage();
+  renderTodos();
+}
+
+completeAllBtn.addEventListener("click", toggleAll);
 function clearCompleted() {
   todos = todos.filter((todo) => !todo.completed);
   saveToStorage();
