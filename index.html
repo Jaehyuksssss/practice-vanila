@@ -5,7 +5,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
-
     <title>TODO-VanilaJS</title>
   </head>
   <body>
@@ -19,25 +18,10 @@
             class="todo-input"
             placeholder="해야 할 일을 입력해주세요."
           />
+          <button type="button" id="submitbtn">추가하기</button>
         </div>
 
-        <ul class="todo-list">
-          <li class="todo-item checked">
-            <div class="checkbox">✔</div>
-            <div class="todo">첫번째 할 일</div>
-            <button class="delBtn">x</button>
-          </li>
-          <li class="todo-item">
-            <div class="checkbox"></div>
-            <div class="todo">두번째 할 일</div>
-            <button class="delBtn">x</button>
-          </li>
-          <li class="todo-item">
-            <div class="checkbox"></div>
-            <div class="todo">세번째 할 일</div>
-            <button class="delBtn">x</button>
-          </li>
-        </ul>
+        <ul class="todo-list"></ul>
         <div class="todo-bottom">
           <div class="left-items">3 items left</div>
           <div class="button-group">
